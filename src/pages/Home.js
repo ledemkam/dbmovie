@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "../Components/Header";
-import Form from "./Form";
+import Form from "../Components/Form";
 
 const Home = () => {
   return (

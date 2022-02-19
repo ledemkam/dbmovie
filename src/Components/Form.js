@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import Card from "../Components/Card";
+import Card from "./Card";
 
 const Form = () => {
   const [moviesData, setMoviesData] = useState([]);
@@ -55,6 +55,7 @@ const Form = () => {
             } else if (sortGoodBad === "badToGood") {
               return a.vote_average - b.vote_average;
             }
+            return b.vote_average + a.vote_average;
           })
           .map((movie) => (
             <Card key={movie.id} movie={movie} />
